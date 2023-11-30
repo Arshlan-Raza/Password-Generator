@@ -8,10 +8,10 @@ const uppercaseCheck = document.querySelector("#uppercase");
 const lowercaseCheck = document.querySelector("#lowercase");
 const numbersCheck = document.querySelector("#numbers");
 const symbolsCheck = document.querySelector("#symbols");
-const indicator = document.querySelector("data-indicator");
+const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateBtn");
-const allCheckBox = document.querySelector("input[type=checkbox");
-const symbols = '~`!@#$%^&*()_+{}:"-=?><,./;[]';
+const allCheckBox = document.querySelectorAll("input[type=checkbox]");
+const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
 let password = "";
 let passwordLength = 10;
@@ -31,6 +31,9 @@ function handleSlider(){
 function setIndicator(color){
     indicator.style.backgroundColor = color;
     // indicator.style.boxShadow = "10px 10px 10px color";
+
+     //add shadow
+  indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 function getRndInteger(min,max){
@@ -121,10 +124,9 @@ function handleCheckBoxChange(){
     }
 }
 
-allCheckBox.forEach( (checkbox) => {
-    checkbox.addEventListener('change',handleCheckBoxChange);
-})
-
+allCheckBox.forEach((checkbox) => {
+    checkbox.addEventListener("change", handleCheckBoxChange);
+  });
 
 inputSlider.addEventListener('input', (e) => {
     passwordLength = e.target.value;
@@ -181,13 +183,13 @@ generateBtn.addEventListener('click', () => {
     // compulsory addition  
 
     for(let i = 0 ; i <funArr.length;  i++){
-        password += funArr[i]();
+        password += funArr[i];
     }
 
     // remaining addition 
     for(let i = 0 ; i < passwordLength - funArr.length ; i++){
         let randIndex = getRndInteger(0,funArr.length);
-        password += funArr[randIndex]();
+        password += funArr[randIndex];
     }
 
     // shuffle the password 
