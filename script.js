@@ -19,7 +19,7 @@ let checkCount = 0;
 handleSlider();
 
 // set strength circle color to grey 
-
+setIndicator("#ccc")
 
  
 // set password length  
