@@ -53,38 +53,62 @@ body{
       text-align: center;
     }
   }
-/* h1{
-    color: #4169E1; 
-    opacity: 0.75;
-    text-transform:uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    line-height: 1.2;
-} */
 
-.display-container{
+
+.display-container {
     position: relative;
-    background-size: cover;
+    /* background-color: var(--dk-violet); */
+    border-radius: 1rem;
+    /* border-bottom: 0.35rem solid var(--lt-violet2); */
     margin: 1rem 0;
     padding-top: 0.35rem;
-    border-radius: 0.125rem; 
+  }
+
+.display {
+  width: 100%;
+  background-color: transparent;
+  /* padding: 1.15rem 1rem; */
+  /* color: var(--vb-yellow); */
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  /* padding-right: 3.25rem; */
+  border: none;
 }
 
-.display{
-    
-    padding: 0;
-    border: 0;
-    width: 92%;
+.copyBtn{
+    margin-top: 0.2rem;
     background-color: transparent;
-    padding-left: 5%;
-    color:black;
-    font-family: 'Yanone Kaffeesatz';
-    font-weight: 1000;
-    font-size: 1.5rem;
-    line-height: 30px;
-    letter-spacing: 1px;
-    /* padding-right: 3.25rem; */
+    border: none;
 }
+
+.tooltip {
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+  
+.tooltip.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.display-container button {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+  }
 
 ::placeholder{
     font-family: 'Yanone Kaffeesatz';
