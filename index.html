@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="./assets/mobile-security.png" type="assets/mobile-security" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -16,7 +25,7 @@
             
             <button data-copy>
                 <span data-copyMsg></span>
-                <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+                <img src="./assets/copy.png" alt="copy" width="23" height="23">
             </button>
 
         </div>
@@ -32,35 +41,39 @@
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthslider>
 
             <!-- checkbox -->
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
-                <label for="uppercase">Include Uppercase letters</label>
+                <label for="uppercase" class="checkboxLabel">Include Uppercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
-                <label for="uppercase">Include Lowercase letters</label>
+                <label for="uppercase" class="checkboxLabel">Include Lowercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
-                <label for="uppercase">Include Numbers</label>
+                <label for="uppercase" class="checkboxLabel">Include Numbers</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
-                <label for="uppercase">Include Symbols</label>
+                <label for="uppercase" class="checkboxLabel">Include Symbols</label>
             </div>
 
             <!-- strength section  -->
             <div class="strength-container">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" data-indicator></div>
             </div>
 
             <!-- generator  password  -->
-            <button class="generateBtn">Generate password</button>
-
+            <!-- <button class="generateBtn">Generate password</button> -->
+            
+            <div class="box" >
+                <a href="#" class="btn btn-white btn-animation-1 generateBtn">Generate password</a> 
+              </div>
+  
         </div>
 
     </div>
