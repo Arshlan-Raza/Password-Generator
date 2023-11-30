@@ -14,7 +14,7 @@
 
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
             
-            <button>
+            <button data-copy>
                 <span data-copyMsg></span>
                 <img src="./assets/copy.svg" alt="copy" width="23" height="23">
             </button>
@@ -38,17 +38,17 @@
             </div>
 
             <div>
-                <input type="checkbox" id="uppercase">
+                <input type="checkbox" id="lowercase">
                 <label for="uppercase">Include Lowercase letters</label>
             </div>
 
             <div>
-                <input type="checkbox" id="uppercase">
+                <input type="checkbox" id="numbers">
                 <label for="uppercase">Include Numbers</label>
             </div>
 
             <div>
-                <input type="checkbox" id="uppercase">
+                <input type="checkbox" id="symbols">
                 <label for="uppercase">Include Symbols</label>
             </div>
 
@@ -59,11 +59,11 @@
             </div>
 
             <!-- generator  password  -->
-            <button class="generateButton">Generate password</button>
+            <button class="generateBtn">Generate password</button>
 
         </div>
 
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
